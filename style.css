@@ -16,6 +16,11 @@
     src: url(./publicc/HelveticaNowDisplay-Medium_2wEhlmo-TD.ttf);
 }
 
+@font-face {
+    font-family: hellB;
+    src: url(./publicc/HelveticaNowDisplay-Bold_VMHV5twUMR.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -51,6 +56,7 @@ nav {
     position: fixed;
     width: 100%;
     backdrop-filter: blur(25px);
+    gap: 40px;
 }
 
 .nav1 {
@@ -74,13 +80,24 @@ nav {
 .nav2 {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 35px;
 }
 
 .nav2 h4 {
     font-size: 17px;
     font-weight: 100;
     font-family: hell;
+    
+}
+
+.nav2 h4 button{
+    background-color: #009660;
+    padding: 5px 20px;
+    font-size: 17px;
+    font-weight: 100;
+    font-family: hell;
+    border: none;
+    border-radius: 5px;
 }
 
 .nav2 h4 i {
@@ -91,6 +108,7 @@ nav {
     height: 30px;
     width: 30px;
     border-radius: 50px;
+    object-fit: cover;
 }
 
 .nav3 {
@@ -115,6 +133,36 @@ nav {
     border-radius: 50px;
 }
 
+@media (max-width:900px) {
+    .nav2 {
+        display: none;
+    }
+
+    .nav3 {
+        display: flex;
+    }
+
+    nav {
+        padding: 15px 5vw;
+        position: fixed;
+    }
+
+    .nav1 {
+        gap: 12px;
+    }
+
+    .nav1 img {
+        height: 40px;
+    }
+
+    .nav1 h4 {
+        font-size: 12px;
+    }
+
+    .nav3 h4 i {
+        font-size: 3vw;
+    }
+}
 @media (max-width: 600px) {
     nav {
         padding: 15px 20px;
@@ -142,40 +190,10 @@ nav {
     }
 
     .nav3 h4 i {
-        font-size: 20px;
+        font-size: 3.5vw;
     }
 }
 
-@media (max-width:900px) {
-    .nav2 {
-        display: none;
-    }
-
-    .nav3 {
-        display: flex;
-    }
-
-    nav {
-        padding: 15px 4vw;
-        position: fixed;
-    }
-
-    .nav1 {
-        gap: 12px;
-    }
-
-    .nav1 img {
-        height: 40px;
-    }
-
-    .nav1 h4 {
-        font-size: 12px;
-    }
-
-    .nav3 h4 i {
-        font-size: 25px;
-    }
-}
 
 
 
@@ -242,11 +260,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1vw;
 }
 
 .section1 .left .button button {
-    font-size: 25px;
-    padding: 20px 70px;
+    font-size: 2vw;
+    padding: 1vw 3vw;
     font-weight: bold;
     background-color: var(--gray);
     color: var(--white);
@@ -308,6 +327,13 @@ main {
     .section1 .left h1 {
         font-size: 4vw;
     }
+
+        .section1 .left .button button {
+            font-size: 2vw;
+            padding: 1vw 3vw;
+            border-radius: 8px;
+            white-space: nowrap;
+        }
 }
 
 @media (max-width:800px) {
@@ -340,6 +366,10 @@ main {
     .section1 .left .price {
         font-size: 20px;
     }
+        .section1 .left .button{
+            justify-content: flex-start;
+            gap: 3vw;
+        }
 
     .section1 .left .button button {
         font-size: 18px;
@@ -377,7 +407,62 @@ main {
 }
 
 @media (max-width:600px) {
+    main{
+        padding-top: 10vw;
+    }
     .section1 .left h1 {
         font-size: 5vw;
     }
+}
+
+
+.section2 {
+    /* background-color: #009660; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 0;
+}
+
+.section2 h1 {
+    font-family: hellB;
+    font-size: 150px;
+    background-image: url(https://ik.imagekit.io/sheryians/Aptitude%20&%20Reasoning/bloomMask%20Large_lvwFbM14_l.png);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.section2 h1.bloom {
+    position: absolute;
+    filter: blur(50px);
+}
+
+
+
+.section2 h4 {
+    font-size: 40px;
+    font-family: neue;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+@media (max-width:900px) {
+    .section2{
+        padding: 5vw 5vw;
+    }
+    .section2 h1 {
+        font-size: 15vw;
+        text-align: center;
+        white-space: nowrap;
+    }
+        .section2 h4 {
+            font-size: 3.5vw;
+            padding-top: 10px;
+            text-align: center;
+            white-space: nowrap;
+        }
 }
